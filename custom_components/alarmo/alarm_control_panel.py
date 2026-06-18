@@ -404,7 +404,7 @@ class AlarmoBaseEntity(AlarmControlPanelEntity, RestoreEntity):
 
         # success
         self._changed_by = user[ATTR_NAME]
-        return True, None
+        return True, user
 
     async def async_service_disarm_handler(self, code, context_id=None):
         """Handle external disarm request from alarmo.disarm service."""
